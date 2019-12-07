@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a collection of my implemted error page designs. Error pages should be minimal, beautiful and lightweight.
+This is a collection of my implemented error page designs. Error pages should be minimal, beautiful and lightweight.
 
 ## Content
 
