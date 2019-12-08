@@ -9,6 +9,13 @@
         background-color: black;
     }
 
+    @font-face {
+        font-family: 'HACKED Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('HACKED Regular'), url('../fonts/HACKED.ttf') format('woff');
+    }
+
     .top-left {
         position: absolute;
         width: 34px;
@@ -16,7 +23,7 @@
         top: 0;
         left: 0;
         padding: 1em;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -31,7 +38,7 @@
         bottom: 0;
         left: 0;
         padding: 1em;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -46,7 +53,7 @@
         top: 0;
         right: 0;
         padding: 1em;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -61,7 +68,7 @@
         bottom: 0;
         right: 0;
         padding: 1em;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -76,7 +83,7 @@
         top: 0;
         left: 42%;
         padding: 1em;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -91,7 +98,7 @@
         bottom: 0;
         left: 42%;
         padding: 1em;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -107,7 +114,7 @@
         left: 0;
         /*padding: 1em;*/
         margin-left: -5%;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -121,10 +128,10 @@
         width: 244px;
         height: 28px;
         top: 42vh;
-        right: 0;
+        right: -5%;
         /*padding: 1em;*/
-        margin-right: -5%;
-        font-family: HACKED,serif;
+        /*margin-right: -5%;*/
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -140,7 +147,7 @@
         padding-left: 10em;
         width: 78px;
         height: 46px;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -155,7 +162,7 @@
         left: 8em;
         bottom: 0;
         padding-bottom: 5.7em;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 36px;
@@ -169,7 +176,7 @@
         height: 131px;
         left: 0.8em;
         top: 0.1em;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 288px;
@@ -183,12 +190,11 @@
         height: 81px;
         left: 1.5em;
         top: 180px;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 288px;
         line-height: 331px;
-
         color: #FFFFFF;
     }
 
@@ -198,7 +204,7 @@
         height: 139px;
         left: 3em;
         top: 431px;
-        font-family: HACKED,serif;
+        font-family: HACKED Regular,serif;
         font-style: normal;
         font-weight: normal;
         font-size: 288px;
@@ -213,6 +219,13 @@
 
     .back-text:hover {
         text-decoration: underline;
+    }
+
+    .hero {
+        position: absolute;
+        /*top: 0;*/
+        /*left: 1em;*/
+        margin: 0 auto;
     }
 </style>
 
@@ -232,8 +245,10 @@
         <div class="back-text"><a href="/"> GO <br>BACK</a></div>
     </div>
 
-    <div class="text-one">I</div>
-    <div class="text-two">DON'T</div>
-    <div class="text-three">EXIST</div>
+    <div class="hero">
+        <div class="text-one">I</div>
+        <div class="text-two">DON'T</div>
+        <div class="text-three">EXIST</div>
+    </div>
 </body>
 </html>
