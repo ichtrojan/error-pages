@@ -5,8 +5,20 @@
 </head>
 
 <style>
-    body {
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
         background-color: black;
+        color: white;
+        font-family: HACKED Regular,serif;
+        flex-direction: column;
+        min-height: 100vh;
+        max-height: 100vh;
+        padding: 20px;
+        margin: 0;
     }
 
     @font-face {
@@ -16,239 +28,141 @@
         src: local('HACKED Regular'), url('../fonts/HACKED.ttf') format('woff');
     }
 
-    .top-left {
-        position: absolute;
-        width: 34px;
-        height: 28px;
-        top: 0;
-        left: 0;
-        padding: 1em;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
+    .mt-auto {
+        margin-top: auto;
     }
 
-    .bottom-left {
-        position: absolute;
-        width: 34px;
-        height: 28px;
-        bottom: 0;
-        left: 0;
-        padding: 1em;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
+    .ml-auto {
+        margin-left: auto;
     }
 
-    .top-right {
-        position: absolute;
-        width: 34px;
-        height: 28px;
-        top: 0;
-        right: 0;
-        padding: 1em;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
+    .mr-auto {
+        margin-right: auto;
     }
 
-    .bottom-right {
-        position: absolute;
-        width: 34px;
-        height: 28px;
-        bottom: 0;
-        right: 0;
-        padding: 1em;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
+    .mb-auto {
+        margin-bottom: auto;
     }
 
-    .centered-top {
-        position: absolute;
-        width: 244px;
-        height: 28px;
-        top: 0;
-        left: 42%;
-        padding: 1em;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
+    .d-flex {
+        display: flex;
     }
 
-    .centered-bottom {
-        position: absolute;
-        width: 244px;
-        height: 28px;
-        bottom: 0;
-        left: 42%;
-        padding: 1em;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
+    .justify-content-between {
+        justify-content: space-between;
     }
 
-    .centered-left {
-        position: absolute;
-        width: 244px;
-        height: 28px;
-        top: 42vh;
-        left: 0;
-        /*padding: 1em;*/
-        margin-left: -5%;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
-        transform: rotate(-90deg);
+    .justify-content-center {
+        justify-content: center;
     }
 
-    .centered-right {
-        position: absolute;
-        width: 244px;
-        height: 28px;
-        top: 42vh;
-        right: -5%;
-        /*padding: 1em;*/
-        /*margin-right: -5%;*/
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
+    .f-24 {
         font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
-        transform: rotate(90deg);
     }
 
-    .back {
-        position: absolute;
-        bottom: 0;
-        padding-bottom: 8em;
-        padding-left: 10em;
-        width: 78px;
-        height: 46px;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
+    .lead {
+        font-size: 288px;
+        line-height: 288px;
+        padding-left: 80px;
+        padding-right: 140px;
     }
 
-    .back-text {
-        position: absolute;
-        width: 118px;
-        height: 37px;
-        left: 8em;
-        bottom: 0;
-        padding-bottom: 5.7em;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
+    .lead .first {
+        margin-left: 140px;
+    }
+
+    .lead .second {
+        margin-top: -150px;
+        margin-left: 286px;
+    }
+
+    .lead .third {
+        margin-left: 720px;
+        margin-top: -35px;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+
+    .back-btn {
+        color: white;
         font-size: 36px;
-        line-height: 41px;
-        color: #FFFFFF;
-    }
-
-    .text-one {
-        position: absolute;
-        width: 229px;
-        height: 131px;
-        left: 0.8em;
-        top: 0.1em;
+        line-height: 36px;
+        margin-bottom: 0;
         font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 288px;
-        line-height: 331px;
-        color: #FFFFFF;
-    }
-
-    .text-two {
-        position: absolute;
-        width: 650px;
-        height: 81px;
-        left: 1.5em;
-        top: 180px;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 288px;
-        line-height: 331px;
-        color: #FFFFFF;
-    }
-
-    .text-three {
-        position: absolute;
-        width: 854px;
-        height: 139px;
-        left: 3em;
-        top: 431px;
-        font-family: HACKED Regular,serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 288px;
-        line-height: 331px;
-        color: #FFFFFF;
-    }
-
-    a {
-        color: #FFFFFF;
         text-decoration: none;
+        margin-left: 220px;
     }
 
-    .back-text:hover {
+    .back-btn svg {
+        margin-right: 15px;
+    }
+
+    .back-btn:hover {
         text-decoration: underline;
     }
 
-    .hero {
+    .left-side-walker {
+        font-size: 24px;
+        line-height: 28px;
         position: absolute;
-        /*top: 0;*/
-        /*left: 1em;*/
-        margin: 0 auto;
+        top: 63%;
+        left: 1.2%;
+        background: none;
+        transform-origin: 0 0;
+        transform: rotate(270deg);
+        color: white;
+        font-family: HACKED Regular,serif;
     }
+
+    .right-side-walker {
+        font-size: 24px;
+        line-height: 28px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background: none;
+        transform: rotate(90deg);
+        margin-right: -80px;
+        color: white;
+        font-family: HACKED Regular,serif;
+    }
+
 </style>
 
 <body>
-    <div class="centered-left">YOU WILL FIND YOUR WAY</div>
-    <div class="top-left">404</div>
-    <div class="centered-top">YOU WILL FIND YOUR WAY</div>
-    <div class="top-right">404</div>
-    <div class="centered-right">YOU WILL FIND YOUR WAY</div>
-    <div class="bottom-right">404</div>
-    <div class="centered-bottom">YOU WILL FIND YOUR WAY</div>
-    <div class="bottom-left">404</div>
-    <div class="back">
-        <svg width="35" height="68" viewBox="0 0 35 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 34L34.5 0.225006L34.5 67.775L0 34Z" fill="white"/>
-        </svg>
-        <div class="back-text"><a href="/"> GO <br>BACK</a></div>
+    <div class="d-flex">
+        <p class="left-side-walker">YOU WILL FIND YOUR WAY</p>
+        <p class="right-side-walker">YOU WILL FIND YOUR WAY</p>
     </div>
+    <section class="main d-flex">
+        <div class="d-flex justify-content-between f-24">
+            <p>404</p>
+            <p>YOU WILL FIND YOUR WAY</p>
+            <p>404</p>
+        </div>
 
-    <div class="hero">
-        <div class="text-one">I</div>
-        <div class="text-two">DON'T</div>
-        <div class="text-three">EXIST</div>
-    </div>
+        <section class="center-piece mb-auto mt-auto">
+            <div class="lead d-flex justify-content-center flex-column">
+                <p class="first">I</p>
+                <p class="second">DON'T</p>
+                <p class="third">EXIST</p>
+            </div>
+
+            <a class="back-btn d-flex" href="#">
+                <svg width="35" height="68" viewBox="0 0 35 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 34L34.5 0.225006L34.5 67.775L0 34Z" fill="white"/>
+                </svg>
+                <span class="back-text">GO <br>BACK</span>
+            </a>
+        </section>
+
+        <div class="d-flex justify-content-between f-24">
+            <p>404</p>
+            <p>YOU WILL FIND YOUR WAY</p>
+            <p>404</p>
+        </div>
+    </section>
 </body>
 </html>
