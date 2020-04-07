@@ -1,0 +1,11 @@
+application:
+  name: error-pages
+  project: error-pages
+  cloud_region: aws/eu-west-3
+  publicly_accessible: true
+routers:
+- name: main
+  routes:
+  - application_name: error-pages
+    paths:
+    - /*
