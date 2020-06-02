@@ -1,0 +1,35 @@
+body {
+    margin: 0rem;
+    font-size: 62.5%;
+    background-color: black;
+    background-image: url(lost.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: Pecita;
+    src: url(../fonts/Pecita.otf);
+}
+
+h1 {
+    width: 11.8125rem;
+    height: 4.4375rem;
+
+    margin-top: 7.5rem;
+
+    font-family: Pecita;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6rem;
+    line-height: 7.375rem;
+
+    color: #ffffff;
+}
