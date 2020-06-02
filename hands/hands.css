@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-size: 62.5%;
+    overflow-y: hidden;
+    
+
+    background-image: url(hand.png);
+    background-repeat: no-repeat;
+    
+    background-size: 93.75rem 700px;
+
+    background-position-x: -6.4375rem;
+    background-position-y: -5.625rem;
+
+    /* background-attachment: fixed; */
+    /* background-position: cover; */
+
+}
+
+.slantLine {
+    width: 914.54px;
+    height: 0px;
+    margin-left: 200px;
+    margin-top: 90px;
+
+
+    border: 15px solid #000000;
+
+    transform: rotate(84.29deg);
+}
+
+.fourZeroFour{
+    width: 212px;
+    height: 163px;
+
+    margin-left: 100px;
+    margin-top: -130px;
+
+    font-family: Papyrus;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 222px;
+
+    color: #000000;
+}
+
+.fiveZeroZero {
+    width: 212px;
+    height: 163px;
+
+    margin-left: 900px;
+    margin-top: 200px;
+
+    font-family: Papyrus;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 222px;
+
+    color: #000000;
+}
