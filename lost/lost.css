@@ -1,35 +1,42 @@
 body {
-    margin: 0rem;
-    font-size: 62.5%;
-    background-color: black;
-    background-image: url(lost.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+  margin: 0;
+  font-size: 62.5%;
+  background-color: black;
+  background-image: url(lost.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 div {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 @font-face {
-    font-family: Pecita;
-    src: url(../fonts/Pecita.otf);
+  font-family: Pecita;
+  src: url(../fonts/Pecita.otf);
 }
 
 h1 {
-    width: 11.8125rem;
-    height: 4.4375rem;
+  position: absolute;
+  margin-top: 22rem;
+  font-family: Pecita;
+  font-size: 6rem;
+  color: #ffffff;
+}
 
-    margin-top: 7.5rem;
+@media only screen and (max-width: 375px) {
+  h1 {
+    margin-top: 16rem;
+    font-size: 4rem;
+  }
+}
 
-    font-family: Pecita;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 6rem;
-    line-height: 7.375rem;
-
-    color: #ffffff;
+@media only screen and (max-width: 500px) {
+  h1 {
+    margin-top: 16rem;
+    font-size: 4rem;
+  }
 }
