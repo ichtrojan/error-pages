@@ -1,7 +1,7 @@
 body {
   background-color: black;
   margin: 0;
- overflow: hidden;
+  overflow: hidden;
 }
 
 @font-face {
@@ -27,10 +27,8 @@ p {
   flex: 1;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   color: white;
-  /* border: 2px solid white;   */
-
 }
 
 .mid {
@@ -53,134 +51,18 @@ p {
 
 .message {
   font-size: 1.75rem;
-  /* margin: 0; */
 }
 
 @media only screen and (max-width: 480px) {
   .code {
     font-size: 3rem;
-    /* margin: 1rem; */
   }
 
   .status {
     font-size: 5rem;
-    /* margin: 3rem; */
   }
 
   .container {
-    /* flex-wrap: nowrap; */
     flex-direction: column;
   }
-}
-
-/* .container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-.slantLine {
-  position: relative;
-  width: 87.5rem;
-
-  border: 0.125rem solid #ffffff;
-
-  transform: rotate(24deg);
-  transform-origin: 0;
-}
-.topContainer,
-.middleContainer,
-.bottomContainer {
-  display: flex;
-}
-.fiveHundred {
-  width: 4.5rem;
-  height: 3.6875rem;
-
-  margin-left: 9.6875rem;
-  margin-top: 1.0625rem;
-
-  font-family: HACKED Regular, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 3rem;
-  line-height: 3.4375rem;
-
-  color: #ffffff;
-}
-
-.everythingOkay {
-  width: 29.6875rem;
-  height: 3.9375rem;
-  margin-left: 35.625rem;
-  margin-top: 1.0625rem;
-
-  font-family: HACKED Regular, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 3rem;
-  line-height: 3.4375rem;
-
-  color: #ffffff;
-}
-
-.notExist {
-  width: 14.9375rem;
-  height: 5.9375rem;
-  margin-left: 11.25rem;
-  margin-top: 9.375rem;
-
-  font-family: HACKED Regular, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 6rem;
-  line-height: 6.875rem;
-
-  color: #ffffff;
-}
-
-.broken {
-  width: 17.375rem;
-  height: 5.9375rem;
-  margin-left: 31.25rem;
-  margin-top: 9.375rem;
-
-  font-family: HACKED Regular, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 6rem;
-  line-height: 6.875rem;
-
-  color: #ffffff;
-}
-
-.findYourWay {
-  width: 28.4375rem;
-  height: 2.9375rem;
-  margin-left: 0.5625rem;
-  margin-top: 3.75rem;
-
-  font-family: HACKED Regular, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 3rem;
-  line-height: 3.4375rem;
-
-  color: #ffffff; */
-}
-
-.fourZeroFour {
-  width: 4.25rem;
-  height: 3.6875rem;
-  margin-left: 650px;
-  margin-top: 60px;
-
-  font-family: HACKED Regular, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 3rem;
-  line-height: 3.4375rem;
-
-  color: #ffffff;
 }
