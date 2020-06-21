@@ -1,62 +1,63 @@
-body {
-    margin: 0;
-    font-size: 62.5%;
-    overflow-y: hidden;
-    
-
-    background-image: url(hand.png);
-    background-repeat: no-repeat;
-    
-    background-size: 93.75rem 700px;
-
-    background-position-x: -6.4375rem;
-    background-position-y: -5.625rem;
-
-    /* background-attachment: fixed; */
-    /* background-position: cover; */
-
+@font-face {
+  font-family: Papyrus;
+  src: url(../fonts/PAPYRUS.ttf);
 }
 
-.slantLine {
-    width: 914.54px;
-    height: 0px;
-    margin-left: 200px;
-    margin-top: 90px;
-
-
-    border: 15px solid #000000;
-
-    transform: rotate(84.29deg);
+* {
+  margin: 0;
 }
 
-.fourZeroFour{
-    width: 212px;
-    height: 163px;
-
-    margin-left: 100px;
-    margin-top: -130px;
-
-    font-family: Papyrus;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 144px;
-    line-height: 222px;
-
-    color: #000000;
+body,
+html {
+  height: 100%;
+  font-size: 62.5%;
 }
 
-.fiveZeroZero {
-    width: 212px;
-    height: 163px;
+.main {
+  position: relative;
+  background-image: url(desktop.png);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-    margin-left: 900px;
-    margin-top: 200px;
+.four {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
 
-    font-family: Papyrus;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 144px;
-    line-height: 222px;
+.five {
+  position: absolute;
+  bottom: 1%;
+  right: 5%;
+}
 
-    color: #000000;
+p {
+  font-family: Papyrus;
+  font-size: 30em;
+  color: #000000;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    background-image: url(./mobile.png);
+  }
+
+  p {
+    font-size: 8em;
+  }
+
+  .four {
+    position: absolute;
+    top: 45%;
+    left: 80%;
+  }
+
+  .five {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+  }
 }
