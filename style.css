@@ -23,17 +23,41 @@ main {
   flex-direction: row;
   min-height: 100vh;
   max-height: 100vh;
+  animation: preloadFade 1s ease-in both;
+}
+
+@keyframes preloadFade {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .col {
   display: flex;
   flex: 1;
   justify-content: center;
+  transform: scale(0.8);
 }
 
-/* .top:hover {
-  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.4s;
-} */
+.col:hover {
+  animation: fadeIn 1s ease-in both;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0.8);
+    /* opacity: 0; */
+  }
+
+  100% {
+    transform: scale(1);
+    /* opacity: 1; */
+  }
+}
 
 .broken {
   font-family: HACKED Regular, serif;
@@ -58,9 +82,58 @@ main {
   margin: 0 16px;
 }
 
-.min {
+.mid {
   font-size: 3.5rem;
   text-align: center;
+}
+
+.min {
+  position: relative;
+  margin-top: -60px;
+}
+
+.min::before,
+.min::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.min::before {
+  clip: rect(44px, 450px, 56px, 0);
+  left: 2px;
+  text-shadow: -1px 0 red;
+  background: black;
+}
+.min::after {
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  background: black;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+  }
+  40% {
+    clip-path: inset(43% 0 1% 0);
+  }
+  60% {
+    clip-path: inset(25% 0 58% 0);
+  }
+  80% {
+    clip-path: inset(54% 0 7% 0);
+  }
+  100% {
+    clip-path: inset(58% 0 43% 0);
+  }
 }
 
 .up,
@@ -132,9 +205,15 @@ main {
   main {
     flex-direction: column;
   }
+
   .col {
     min-height: 100vh;
     max-height: 100vh;
+  }
+
+  .top,
+  .bottom {
+    font-size: 1.5rem;
   }
 }
 
@@ -160,6 +239,7 @@ main {
     align-items: center;
     justify-content: center;
   }
+
   .min {
     font-size: 2rem;
   }
