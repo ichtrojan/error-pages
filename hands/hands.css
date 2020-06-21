@@ -20,6 +20,17 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: fadeIn 1s ease-in both;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .four {
