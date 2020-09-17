@@ -23,40 +23,12 @@ main {
   flex-direction: row;
   min-height: 100vh;
   max-height: 100vh;
-  animation: preloadFade 1s ease-in both;
-}
-
-@keyframes preloadFade {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
 }
 
 .col {
   display: flex;
   flex: 1;
   justify-content: center;
-  transform: scale(0.8);
-}
-
-.col:hover {
-  animation: fadeIn 1s ease-in both;
-}
-
-@keyframes fadeIn {
-  0% {
-    transform: scale(0.8);
-    /* opacity: 0; */
-  }
-
-  100% {
-    transform: scale(1);
-    /* opacity: 1; */
-  }
 }
 
 .broken {
@@ -71,6 +43,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: none !important;
 }
 
 .top,
@@ -110,6 +83,41 @@ main {
   background: black;
 }
 .min::after {
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  background: black;
+}
+
+/* GLITCH EFFECT FOR THE REST OF THE CONTENT */
+
+.broken,
+.sec::before,
+.sec::after {
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.sec {
+  position: relative;
+  /* margin-top: -60px; */
+}
+
+.sec::before,
+.sec::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sec::before {
+  clip: rect(44px, 450px, 56px, 0);
+  left: 2px;
+  text-shadow: -1px 0 red;
+  background: black;
+}
+.sec::after {
   left: -2px;
   text-shadow: -1px 0 blue;
   background: black;
